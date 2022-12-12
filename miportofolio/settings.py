@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'taggit'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://portofolio-dj-production.up.railway.app/']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
