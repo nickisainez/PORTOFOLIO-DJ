@@ -83,13 +83,12 @@ WSGI_APPLICATION = 'miportofolio.wsgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': 'django_psdb_engine',
-    'NAME': os.environ.get('DB_NAME'),
-    'HOST': os.environ.get('DB_HOST'),
-    'PORT': os.environ.get('DB_PORT'),
-    'USER': os.environ.get('DB_USER'),
-    'PASSWORD': os.environ.get('DB_PASSWORD'),
-    'OPTIONS': {'ssl': {'ssl-ca': os.environ.get('MYSQL_ATTR_SSL_CA')}, 'charset': 'utf8mb4'}
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'railway',
+    'USER': 'root',
+    'PASSWORD': 'KtyTvWW9Y4jCt7mTKPH1',
+    'HOST': 'containers-us-west-169.railway.app',
+    'PORT': '7990',
   }
 }
 
