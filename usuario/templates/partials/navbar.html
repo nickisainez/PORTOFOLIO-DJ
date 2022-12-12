@@ -1,0 +1,39 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class=  "navbar-nav ms-auto">
+        <li class="nav-item active">
+          {% if request.user.is_anonymous %}
+          <a class="nav-link" href="{% url 'register' %}">Registrarse<span class="sr-only"></span></a>
+          {% endif %}
+        </li>
+        <li class="nav-item active">
+          {% if request.user.is_authenticated %}
+          <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión<span class="sr-only"></span></a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'aboutme' %}">Sobre mí</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'crear' %}">Crear Proyecto<span class="sr-only"></span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <a class="btn btn-primary btn=sm" href="{% static 'assets/scss/CCVV2021.pdf' %}" target="_blank">Descargar CV</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>

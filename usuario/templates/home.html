@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% block content %}
+{% load static %}
+
+<header class="row">
+    <div class="col-md-4">
+        <img src="{% static 'assets/img/profile.jpg' %}" alt="" width="350" height="300">
+    </div>
+
+    <div class="col-md-8 my-auto p-4" align="justify">
+        <h1>Soy <strong>Nicki Sainez</strong></h1>
+        <h3>Soy estudiante Backend</h3>
+        <p >Actualmente estoy estudiando desarrollo Back-End en el Bootcamp de Silabuz gracias a una beca obtenida de parte del MTPE, siempre me interesó el desarrollo Web y todo lo que conlleva detrás de ello, por ese motivo opté por esta rama del desarrollo.</p>
+    </div>
+
+</header>
+
+<div class="row my-4 text-center">
+    <h3>Mis Proyectos</h3>
+    
+    {% for project in projects %}
+
+    <div class="col-md-4 p-4">
+        <div class="card bg-light card-project">
+            <img src="{{project.photo.url}}" alt="{{project.title}}" width="200" height="200" class="card-img-top" />
+            <div class="card-body">
+
+                <h2>{{project.title}}</h2>
+                <p>{{project.description | truncatechars:20}}</p>
+                <a href="{% url 'detailsProjects' project.id %}" target="_blank">Leer más</a><br>
+                            
+                
+                {% if project.url %}
+                <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="__blank" rel="noreferrer">Visitar el proyecto</a>
+                  {% endif %}
+
+                
+
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+</div>
+
+{% endblock %}  

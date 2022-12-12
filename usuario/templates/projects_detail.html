@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block content %} 
+{% load static %}
+
+
+<div class="text-center">
+<h2>{{project.title}}</h2>
+    <img src="{{project.photo.url}}" alt="{{project.title}}" class="img-fluid"/>
+
+    <div class="my-4">
+        <p>{{project.description}}</p>
+    </div>
+</div>
+
+
+{% endblock %}

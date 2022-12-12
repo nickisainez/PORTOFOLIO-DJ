@@ -1,0 +1,119 @@
+{% extends "base.html" %} 
+{% block content %}
+{% load static %}
+
+  <main id="main">
+
+    <section class="section pb-5">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+
+            <h2>Sobre mí</h2>
+            <p class="mb-0">Actualmente estudiante desarrollador BackEnd en Silabuz.</p>
+            <p class="mb-0">Tengo 26 años de edad.</p>
+            <p class="mb-0">Soy bachiller de Ing. Mecánica Eléctrica.</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
+            <h3 class="h3 mb-4">Skills</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Flask</strong>
+                  <span class="ml-auto">65%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>DJango</strong>
+                  <span class="ml-auto">80%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>HTML5/CSS3</strong>
+                  <span class="ml-auto">81%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 81%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>MYSQL</strong>
+                  <span class="ml-auto">87%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>MongoDB</strong>
+                  <span class="ml-auto">70%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width:70%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Reddis</strong>
+                  <span class="ml-auto">65%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up" align="justify">
+            <p><img src="{% static 'assets/img/usarusar.jpg' %}" alt="Image" class="img-fluid"></p>
+            <p>Nací en la ciudad de Chimbote, región Áncash, viví la mayoría de mi vida en esta ciudad, actualmente trabajo a medio tiempo.</p>
+            <p>Siempre me interesó todo lo relacionado a la programación y desarrollo de software, justamente este año se presentó una oportunidad de estudiar el curso Backend de manera virtual gracias a una beca obtenida.</p>
+             <p><a href="{% static 'assets/scss/CCVV2021.pdf' %}" class="readmore" target="_blank">Descarga mi CV</a></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
+          <div class="credits">
+           Designed by <a>Nicki</a>
+          </div>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://twitter.com/nickisainez" target="_blank"><span class="bi bi-twitter"></span></a>
+          <a href="https://github.com/nickisainez" target="_blank"><span class="bi bi-github"></span></a>
+          <a href="https://www.linkedin.com/in/nickisainez/"target="_blank"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+</body>
+
+{% endblock %}

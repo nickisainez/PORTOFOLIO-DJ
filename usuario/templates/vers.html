@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<div class="mt-10">
+  <div class="card" style="width: 48%; margin: auto">
+    <div class="card-body">
+      <div class="text-center">
+        <h4>Nuevo Proyecto</h4>
+      </div>
+        <br>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{ form.as_p }}
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
