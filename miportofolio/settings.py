@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'taggit'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://portofolio-dj-production.up.railway.app/']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -87,9 +89,9 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'railway',
     'USER': 'root',
-    'PASSWORD': 'KtyTvWW9Y4jCt7mTKPH1',
-    'HOST': 'containers-us-west-169.railway.app',
-    'PORT': '7990',
+    'PASSWORD': 'SAGmbPRoQLA60lmxjGpc',
+    'HOST': 'containers-us-west-164.railway.app',
+    'PORT': '6895',
   }
 }
 
@@ -129,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'miportofolio/static'),)
 
 MEDIA_URL = '/media/' 
